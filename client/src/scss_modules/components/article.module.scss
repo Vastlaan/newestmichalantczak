@@ -1,0 +1,41 @@
+@import "../main.module.scss";
+
+section {
+  padding: 2rem;
+  h1 {
+    margin-bottom: 2rem;
+    font-family: $font-tech;
+    color: var(--color-primary-dark);
+    font-size: 2.5rem;
+  }
+  h3 {
+    margin: 1rem auto;
+    font-family: $font-rajdhani;
+    font-size: 2.2rem;
+    color: var(--color-secondary);
+  }
+  p {
+    font-family: $font-montserrat;
+    color: var(--default-font-color);
+    font-size: 1.8rem;
+  }
+
+  article {
+    p {
+      font-family: $font-montserrat;
+      color: var(--default-font-color);
+      font-size: 1.8rem;
+      margin: 1rem auto;
+    }
+    ul {
+      margin: 1rem auto;
+      list-style: none;
+      padding: 2rem;
+      background-color: rgba(orange, 0.6);
+      li {
+        font-family: $font-tech;
+        font-size: 1.6rem;
+      }
+    }
+  }
+}

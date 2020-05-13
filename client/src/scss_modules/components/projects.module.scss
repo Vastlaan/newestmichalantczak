@@ -1,0 +1,204 @@
+@import "../main.module.scss";
+.nav {
+  padding: 2rem;
+
+  p,
+  a {
+    text-decoration: none;
+    font-family: $font-rajdhani;
+    font-weight: 400;
+    color: var(--color-secondary);
+    font-size: 2rem;
+  }
+}
+
+.page {
+  padding: 2rem;
+  @include respond(s) {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-family: $font-tech;
+    font-size: 4rem;
+    color: var(--color-primary-dark);
+  }
+
+  article {
+    margin: 2rem;
+    padding: 2rem;
+    border: 1px solid var(--color-grey);
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 2rem;
+
+    @include respond(m) {
+      grid-template-columns: 1fr;
+      padding: 0;
+    }
+    h3 {
+      text-align: center;
+      text-transform: uppercase;
+      color: var(--color-secondary);
+      font-family: $font-rajdhani;
+      font-size: 3rem;
+      font-weight: 400;
+      letter-spacing: 0.2rem;
+      grid-column: 1/3;
+      grid-row: 1/2;
+      @include respond(m) {
+        grid-column: 1/2;
+      }
+    }
+    ul {
+      grid-column: 1/3;
+      width: 100%;
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2rem;
+      @include respond(m) {
+        grid-template-columns: 1fr;
+      }
+
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include respond(m) {
+          grid-column: 1/2;
+        }
+        h6 {
+          font-family: $font-rajdhani;
+          font-size: 2.5rem;
+          color: var(--color-primary-dark);
+          text-align: center;
+        }
+        p {
+          margin: 2rem auto;
+          text-align: center;
+          font-family: $font-montserrat;
+          font-size: 1.8rem;
+          color: var(--default-font-color);
+        }
+        a {
+          font-family: $font-rajdhani;
+          font-size: 2rem;
+          background-color: var(--color-secondary);
+          padding: 1rem 3rem;
+          color: white;
+          text-decoration: none;
+          cursor: pointer;
+          transition: all 0.3s;
+
+          &:hover {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+.gallery {
+  align-self: center;
+  position: relative;
+  grid-column: 1/2;
+  @include respond(m) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 1rem 0rem;
+  }
+
+  button {
+    padding: 1rem 2rem;
+    border: 1px solid var(--color-secondary);
+    z-index: 9;
+    color: var(--color-secondary);
+    font-size: 3rem;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  &__left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    &:hover {
+      & > * {
+        animation: slideButtonReverse 0.6s ease-out;
+      }
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &__right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    &:hover {
+      & > * {
+        animation: slideButton 0.6s ease-out;
+      }
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.description {
+  p {
+    font-family: $font-montserrat;
+    color: var(--default-font-color);
+    font-size: 1.8rem;
+
+    @include respond(m) {
+      text-align: center;
+    }
+  }
+
+  &__buttons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    a {
+      font-family: $font-rajdhani;
+      font-size: 2rem;
+      background-color: var(--color-secondary);
+      padding: 1rem 3rem;
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}
+.sample {
+  &:hover {
+    position: relative;
+    &::before {
+      display: block;
+      width: 120%;
+      content: "This website is a sample website and may take up to 30s to load. Only for presentation purpose.";
+      font-size: 1.2rem;
+      font-family: "Courier New", sans-serif;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateY(105%);
+      padding: 1rem;
+      background-color: seagreen;
+      color: snow;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@import "../main.module.scss";
+
+.nav {
+  padding: 2rem;
+
+  p,
+  a {
+    text-decoration: none;
+    font-family: $font-rajdhani;
+    font-weight: 400;
+    color: var(--color-secondary);
+    font-size: 2rem;
+  }
+}
+
+.page {
+  padding: 2rem;
+
+  h1 {
+    font-family: $font-tech;
+    font-size: 4rem;
+    color: var(--color-primary-dark);
+  }
+
+  article {
+    padding: 2rem;
+
+    h3 {
+      font-family: $font-rajdhani;
+      font-size: 3rem;
+      font-weight: 400;
+      letter-spacing: 0.2rem;
+      color: var(--color-secondary);
+    }
+    section {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+
+      @include respond(m) {
+        grid-template-columns: 1fr;
+      }
+
+      p {
+        animation: popUp 0.5s ease-out;
+        font-family: $font-montserrat;
+        font-size: 1.8rem;
+        color: var(--default-font-color);
+        align-self: center;
+      }
+    }
+  }
+}
+
+.image {
+  width: 30rem;
+  animation: slideLeft 0.3s ease-out;
+
+  @include respond(m) {
+    grid-row: 1/2;
+  }
+}

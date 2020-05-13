@@ -1,0 +1,166 @@
+@import "../main.module.scss";
+.page {
+  background-color: var(--bg-color);
+  width: 100%;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 30rem 1fr 30rem;
+  animation: slideDown 0.3s ease-in;
+  z-index: 10;
+
+  @include respond(m) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  grid-column: 1/2;
+
+  h1 {
+    font-family: $font-tech;
+    color: var(--color-primary-dark);
+    font-size: 3rem;
+    line-height: 1.2;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid transparent; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    //margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.15rem; /* Adjust as needed */
+    animation: typing 3s ease-in-out, blink-caret 0.5s 6 linear;
+  }
+}
+.search {
+  grid-column: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  @include respond(m) {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    margin: 1rem;
+  }
+
+  input {
+    width: 50%;
+    border: none;
+    background-color: var(--color-grey);
+    padding: 1rem;
+
+    &:focus {
+      outline: none;
+    }
+    @include respond(m) {
+      padding: 0.5rem;
+    }
+  }
+  button {
+    padding: 1rem;
+    border: none;
+    background-color: var(--color-secondary);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      background-color: var(--color-secondary-light);
+      color: rgba(0, 0, 0, 0.8);
+    }
+    &:focus {
+      outline: none;
+    }
+    @include respond(m) {
+      padding: 0.5rem;
+    }
+  }
+}
+.icons {
+  grid-column: 3/4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  @include respond(m) {
+    grid-column: 2/3;
+  }
+
+  & > * {
+    text-decoration: none;
+    font-size: 3rem;
+    margin-right: 2rem;
+    color: var(--color-tertiary);
+    &:last-child {
+      margin-right: 0;
+    }
+    @include respond(xs) {
+      margin-right: 1rem;
+    }
+  }
+  & > a,
+  p {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+.image {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  & > div > div {
+    padding-bottom: 100% !important;
+  }
+}
+
+.results {
+  position: absolute; // relative to .search
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--color-secondary);
+  transform: translateY(100%);
+
+  &__icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 3rem;
+    color: darkred;
+    cursor: pointer;
+  }
+
+  div {
+    padding: 1rem;
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+
+      a,
+      li {
+        margin: 1rem auto;
+        text-align: center;
+        font-family: $font-tech;
+        color: var(--default-font-color);
+        font-size: 1.6rem;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          color: var(--bg-color);
+        }
+      }
+      li {
+        color: red;
+      }
+    }
+  }
+}

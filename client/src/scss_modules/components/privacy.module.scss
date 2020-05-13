@@ -1,0 +1,14 @@
+@import "../main.module.scss";
+.page {
+  h2 {
+    font-family: $font-tech;
+    color: var(--color-primary-dark);
+    font-size: 2.5rem;
+  }
+  ul {
+    padding: 2rem;
+    font-family: $font-tech;
+    color: var(--default-font-color);
+    font-size: 1.8rem;
+  }
+}

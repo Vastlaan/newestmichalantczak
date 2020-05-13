@@ -1,0 +1,21 @@
+@import "../main.module.scss";
+.page {
+  padding: 5rem 2rem;
+
+  h1 {
+    font-family: $font-tech;
+    font-size: 3rem;
+    color: var(--color-primary-dark);
+  }
+
+  p {
+    font-family: $font-tech;
+    font-size: 2rem;
+    color: var(--default-font-color);
+  }
+}
+.icon {
+  font-size: 15rem;
+  color: var(--color-secondary);
+  margin: 5rem auto;
+}

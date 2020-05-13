@@ -1,0 +1,219 @@
+@import "../main.module.scss";
+.nav {
+  padding: 2rem;
+
+  p,
+  a {
+    text-decoration: none;
+    font-family: $font-rajdhani;
+    font-weight: 400;
+    color: var(--color-secondary);
+    font-size: 2rem;
+  }
+}
+.page {
+  display: flex;
+
+  @include respond(m) {
+    flex-direction: column;
+  }
+}
+
+.form {
+  flex: 0 0 60%;
+  padding: 2rem;
+  border-right: 1px solid var(--color-primary-light);
+
+  @include respond(m) {
+    border-right: 1px solid transparent;
+  }
+
+  &__header {
+    font-family: $font-rajdhani;
+    font-size: 3.2rem;
+    font-weight: 300;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--default-font-color);
+  }
+  &__info {
+    margin: 2rem auto;
+    font-family: $font-montserrat;
+    font-size: 1.6rem;
+    color: var(--color-primary-dark);
+  }
+  &__warning {
+    font-family: $font-rajdhani;
+    color: red;
+    font-size: 1.8rem;
+    text-align: center;
+    border: 1px solid rgba(red, 0.3);
+    padding: 2rem;
+  }
+  &__field {
+    display: flex;
+    justify-content: flex-end;
+    margin: 2rem auto;
+
+    label {
+      margin-right: 2rem;
+      font-family: $font-rajdhani;
+      font-size: 2rem;
+      color: var(--color-primary-dark);
+    }
+
+    input,
+    textarea {
+      width: 50%;
+      padding: 1rem;
+      font-family: $font-montserrat;
+      font-size: 1.6rem;
+      border: 1px solid var(--color-primary-light);
+
+      @include respond(m) {
+        width: 70%;
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+      }
+    }
+    textarea {
+      height: 20rem;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto 5rem auto;
+
+    button {
+      border: none;
+      padding: 1rem 4rem;
+      background-color: var(--color-secondary);
+      color: white;
+      font-family: $font-rajdhani;
+      font-size: 3rem;
+      transition: all 0.3s;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+      }
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}
+
+.details {
+  flex: 0 0 40%;
+  padding: 2rem;
+
+  &__header {
+    font-family: $font-rajdhani;
+    font-size: 2.8rem;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &__intro {
+    font-family: $font-rajdhani;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: lowercase;
+  }
+  &__info {
+    margin: 2rem auto;
+    font-family: $font-montserrat;
+    font-size: 1.6rem;
+    color: var(--color-primary-dark);
+  }
+  &__field {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid var(--color-tertiary);
+    transition: all 0.3s;
+
+    &:not(:last-child) {
+      &:hover {
+        background-color: var(--color-primary-light);
+        cursor: pointer;
+      }
+    }
+
+    &_icon {
+      font-size: 3rem;
+      color: var(--color-tertiary);
+    }
+    p {
+      font-size: 2.5rem;
+      font-family: $font-rajdhani;
+      font-weight: 900;
+      color: var(--color-primary-dark);
+    }
+  }
+}
+
+.confirmation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-secondary);
+  z-index: 199;
+  animation: slideRight 0.3s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 5rem;
+    height: 5rem;
+
+    & > * {
+      font-size: 5rem;
+      color: var(--color-primary-dark);
+      transition: all 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-family: $font-tech;
+    font-weight: 500;
+  }
+  a {
+    padding: 1rem 3rem;
+    font-family: $font-rajdhani;
+    font-size: 2.5rem;
+    background-color: var(--color-primary);
+    text-decoration: none;
+
+    span {
+      color: white;
+    }
+  }
+}
