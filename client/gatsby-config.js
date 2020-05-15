@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: `https://www.michalantczak.com`,
     keywords: `make website, design websites, create website, make website for my company, website for bussines, zakelijke website laten maken, online webshop starten, webshop beginnen, webdesign, web developer, amsterdam developer, amsterdam, purmerend web developer, purmerend, amsterdam make website`,
     robots: `index, follow`,
-    image: `/images/me2.png`,
+    image: `/michalantczak.png`,
     canonicalUrl: `https://www.michalantczak.com`,
   },
   proxy: {
