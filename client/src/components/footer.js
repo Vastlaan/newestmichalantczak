@@ -2,13 +2,18 @@ import React from "react"
 import { Link } from "gatsby"
 import { FaMapMarkerAlt, FaEnvelope, FaPhone } from "react-icons/fa"
 import styles from "../scss_modules/components/footer.module.scss"
+import Logo from "../images/logo.svg"
 
 const Footer = () => {
   return (
     <footer className={styles.page}>
       <div className={styles.main}>
         <div className={styles.main__details}>
-          <h3>Michal Antczak</h3>
+          <div>
+            <img src={Logo} alt="logo" />
+            <h3>Michal Antczak</h3>
+          </div>
+
           <p>
             <FaMapMarkerAlt style={{ marginRight: "1rem", color: "pink" }} />
             Oostervenne 397

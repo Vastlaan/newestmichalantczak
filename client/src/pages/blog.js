@@ -6,6 +6,7 @@ import Layout from "../layouts/layout_default"
 import { FaHeart, FaClock } from "react-icons/fa"
 import styles from "../scss_modules/components/blog.module.scss"
 import Article1 from "../articles/article_1.js"
+import Article2 from "../articles/article_2.js"
 
 function Blog() {
   const [showArticle, setShowArticle] = useState(0)
@@ -115,6 +116,52 @@ function Blog() {
           <div className={styles.article__wrapper}>
             <div className={styles.article__wrapper_content} id="article_1">
               {showArticle === 1 ? <Article1 /> : null}
+            </div>
+          </div>
+
+          <div className={styles.article__tags}>
+            <p>Tags:</p>
+            <ul>
+              <li>#VS Code</li>
+              <li>#Windows</li>
+              <li>#Linux</li>
+              <li>#SSH</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className={styles.article}>
+          <div className={styles.article__header}>
+            <div className={styles.article__header_date}>
+              <FaClock style={{ marginRight: "1rem" }} />
+              Date of submiting:
+              <span>30-04-2020</span>
+            </div>
+          </div>
+          <div className={styles.article__title}>
+            <h6>Ubuntu Configuration with SSH</h6>
+          </div>
+
+          <div className={styles.article__buttons}>
+            <div className={styles.article__buttons_read}>
+              {showArticle === 2 ? (
+                <button onClick={() => setShowArticle(0)}>Close</button>
+              ) : (
+                <button onClick={() => appendArticle(2, "article_2")}>
+                  Read article
+                </button>
+              )}
+            </div>
+
+            <div className={styles.article__buttons_like}>
+              <FaHeart onClick={() => addNewLike("article_2")} />
+              <span id="likes-article_2"></span>
+            </div>
+          </div>
+
+          <div className={styles.article__wrapper}>
+            <div className={styles.article__wrapper_content} id="article_2">
+              {showArticle === 2 ? <Article2 /> : null}
             </div>
           </div>
 

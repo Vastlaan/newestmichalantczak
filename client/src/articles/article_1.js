@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styles from "../scss_modules/components/article.module.scss"
 
 const Article1 = () => {
@@ -138,7 +139,7 @@ const Article1 = () => {
             !Be aware Step 5 assumes that you configured your server with
             password authentication (5.a) or privateKey authentication (5.b). If
             you’re not sure what is that – please check my other article about{" "}
-            <a href="/blog#article_2">Ubuntu Configuration with SSH</a>.
+            <Link to="/blog#article_2">Ubuntu Configuration with SSH</Link>.
           </p>
         </article>
 
@@ -166,8 +167,8 @@ const Article1 = () => {
             of creating Droplet (Digital Ocean) or lunching EC2 Instance (AWS
             Services). If you don’t have generated and enabled SSH Key on your
             server I recommend to do so! Check my
-            <a href="/blog#article_2">Ubuntu Configuration with SSH</a> article
-            for more info.
+            <Link to="/blog#article_2">Ubuntu Configuration with SSH</Link>{" "}
+            article for more info.
           </p>
         </article>
 

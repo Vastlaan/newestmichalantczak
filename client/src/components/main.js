@@ -124,20 +124,20 @@ function Main() {
             <ul>
               <li>
                 <DiJavascript1
-                  style={{ color: "orange", fontSize: "2.5rem" }}
+                  style={{ color: "orange", fontSize: "3.5rem" }}
                 />
               </li>
               <li>
-                <FaHtml5 style={{ color: "darkblue", fontSize: "2.5rem" }} />
+                <FaHtml5 style={{ color: "darkblue", fontSize: "3.5rem" }} />
               </li>
               <li>
-                <FaCss3 style={{ color: "orangered", fontSize: "2.5rem" }} />
+                <FaCss3 style={{ color: "orangered", fontSize: "3.5rem" }} />
               </li>
               <li>
-                <FaSass style={{ color: "purple", fontSize: "2.5rem" }} />
+                <FaSass style={{ color: "purple", fontSize: "3.5rem" }} />
               </li>
               <li>
-                <FaReact style={{ color: "skyblue", fontSize: "2.5rem" }} />
+                <FaReact style={{ color: "skyblue", fontSize: "3.5rem" }} />
               </li>
             </ul>
             <Link to="/services">
@@ -155,17 +155,17 @@ function Main() {
             </p>
             <ul>
               <li>
-                <DiNodejs style={{ color: "darkgreen", fontSize: "4rem" }} />
+                <DiNodejs style={{ color: "darkgreen", fontSize: "5rem" }} />
               </li>
               <li>
-                <FaAws style={{ color: "orange", fontSize: "2.5rem" }} />
+                <FaAws style={{ color: "orange", fontSize: "3.5rem" }} />
               </li>
               <li>
-                <DiNginx style={{ color: "green", fontSize: "4rem" }} />
+                <DiNginx style={{ color: "green", fontSize: "5rem" }} />
               </li>
 
               <li>
-                <DiDigitalOcean style={{ color: "blue", fontSize: "4rem" }} />
+                <DiDigitalOcean style={{ color: "blue", fontSize: "5rem" }} />
               </li>
             </ul>
             <Link to="/services">
@@ -182,16 +182,16 @@ function Main() {
             </p>
             <ul>
               <li>
-                <DiPostgresql style={{ color: "blue", fontSize: "3rem" }} />
+                <DiPostgresql style={{ color: "blue", fontSize: "4rem" }} />
               </li>
               <li>
-                <DiMongodb style={{ color: "darkgreen", fontSize: "3rem" }} />
+                <DiMongodb style={{ color: "darkgreen", fontSize: "4rem" }} />
               </li>
               <li>
                 <img
                   src={GraphIcon}
                   alt="graphql icon"
-                  style={{ width: "2rem", height: "2rem" }}
+                  style={{ width: "2rem", height: "3rem" }}
                 />
               </li>
             </ul>
