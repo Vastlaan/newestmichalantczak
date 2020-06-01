@@ -81,8 +81,35 @@ function Projects() {
           }
         }
       }
+      restaurant_1: file(relativePath: { eq: "restaurant_1.png" }) {
+        name
+        image: childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      restaurant_2: file(relativePath: { eq: "restaurant_2.png" }) {
+        name
+        image: childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      restaurant_3: file(relativePath: { eq: "restaurant_3.png" }) {
+        name
+        image: childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
+  const lacasaPhotosNamesArray = Object.keys(data).filter(name =>
+    name.toLowerCase().includes("restaurant")
+  )
   const clairePhotosNamesArray = Object.keys(data).filter(name =>
     name.toLowerCase().includes("claire")
   )
@@ -92,6 +119,7 @@ function Projects() {
   const resumePhotosNamesArray = Object.keys(data).filter(name =>
     name.toLowerCase().includes("resume")
   )
+  const [laCasaPhoto, setLaCasaPhoto] = useState(0)
   const [clairePhoto, setClairePhoto] = useState(0)
   const [barberPhoto, setBarberPhoto] = useState(0)
   const [resumePhoto, setResumePhoto] = useState(0)
@@ -123,6 +151,62 @@ function Projects() {
       </nav>
       <main className={styles.page}>
         <h1>Projects Gallery</h1>
+        <article>
+          <h3>La Casa Restaurant</h3>
+          <section className={styles.gallery}>
+            <button
+              className={styles.gallery__left}
+              onClick={() =>
+                shufflePhoto(
+                  "down",
+                  laCasaPhoto,
+                  setLaCasaPhoto,
+                  lacasaPhotosNamesArray.length
+                )
+              }
+            >
+              <FaChevronCircleLeft />
+            </button>
+            <div className={styles.image}>
+              <Image
+                fluid={data[lacasaPhotosNamesArray[laCasaPhoto]].image.fluid}
+                alt={data[lacasaPhotosNamesArray[laCasaPhoto]].name}
+              />
+            </div>
+            <button
+              className={styles.gallery__right}
+              onClick={() =>
+                shufflePhoto(
+                  "up",
+                  laCasaPhoto,
+                  setLaCasaPhoto,
+                  lacasaPhotosNamesArray.length
+                )
+              }
+            >
+              <FaChevronCircleRight />
+            </button>
+          </section>
+          <section className={styles.description}>
+            <div>
+              <p>
+                <strong>LaCasa Restaurant</strong> is the italian restaurant.
+                Their website present the company as sofisticated and elegant
+                place. Visitor can chose the language and deep in the menu
+                available online. For those who want to reserve the table
+                special resevation system collect all necessary data including
+                coronavirus disclaimer. Guests can also send a contact form if
+                they have any questions.
+              </p>
+            </div>
+            <div className={styles.description__buttons}>
+              <a href="https://condescending-euclid-455bb0.netlify.app/">
+                Visit website
+              </a>
+              <a href="https://github.com/Vastlaan/restaurant.git">View code</a>
+            </div>
+          </section>
+        </article>
         <article>
           <h3>Webshop Claire Hembury</h3>
           <section className={styles.gallery}>

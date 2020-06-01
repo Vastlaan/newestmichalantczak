@@ -88,7 +88,7 @@ function Blog() {
                 <div className={styles.article__header_date}>
                   <FaClock style={{ marginRight: "1rem" }} />
                   Date of submiting:
-                  <span>06-05-2020</span>
+                  <span>{article.date}</span>
                 </div>
               </div>
               <div className={styles.article__title}>

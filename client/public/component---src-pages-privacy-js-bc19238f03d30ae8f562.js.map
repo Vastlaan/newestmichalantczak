@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///./src/pages/privacy.js"],"names":["privacy"],"mappings":"4FAAA,gCAMeA,UAJC,WACd,OAAO","file":"component---src-pages-privacy-js-bc19238f03d30ae8f562.js","sourcesContent":["import React from \"react\"\r\n\r\nconst privacy = () => {\r\n  return <div>Privacy goes here</div>\r\n}\r\n\r\nexport default privacy\r\n"],"sourceRoot":""}
