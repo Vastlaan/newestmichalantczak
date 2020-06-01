@@ -118,7 +118,7 @@ function Projects() {
       <SEO title="Projects" />
       <nav className={styles.nav}>
         <p>
-          <Link to="/">Home</Link> > <Link to="/contact">Projects</Link>
+          <Link to="/">Home</Link> > <Link to="/projects">Projects</Link>
         </p>
       </nav>
       <main className={styles.page}>

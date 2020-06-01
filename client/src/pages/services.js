@@ -44,7 +44,7 @@ function Services() {
       <SEO title="Services" />
       <nav className={styles.nav}>
         <p>
-          <Link to="/">Home</Link> > <Link to="/contact">Services</Link>
+          <Link to="/">Home</Link> > <Link to="/services">Services</Link>
         </p>
       </nav>
       <main className={styles.page}>
