@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: `https://www.michalantczak.com`,
     keywords: `make website, design websites, create website, make website for my company, website for bussines, zakelijke website laten maken, online webshop starten, webshop beginnen, webdesign, web developer, amsterdam developer, amsterdam, purmerend web developer, purmerend, amsterdam make website`,
     robots: `index, follow`,
-    image: `/images/michalantczak.png`,
+    image: `/images/logo.svg`,
     canonicalUrl: `https://www.michalantczak.com`,
   },
   proxy: {
@@ -32,8 +32,8 @@ module.exports = {
         name: `michal-antczak-portfolio`,
         short_name: `portfolio`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#785964`,
+        theme_color: `#785964`,
         display: `minimal-ui`,
         icon: `src/images/logo.svg`, // This path is relative to the root of the site.
       },
