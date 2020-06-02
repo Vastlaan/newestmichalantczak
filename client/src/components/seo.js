@@ -55,7 +55,8 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `image`,
-          content: "https://michalantczak.com/images/me2.png",
+          content:
+            "https://michalantczakblogresources.s3.eu-central-1.amazonaws.com/me-low-quality.png",
         },
         {
           name: `canonicalUrl`,
@@ -67,7 +68,8 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: "https://michalantczak.com/images/me2.png",
+          content:
+            "https://michalantczakblogresources.s3.eu-central-1.amazonaws.com/me-low-quality.png",
         },
         {
           property: `og:description`,
