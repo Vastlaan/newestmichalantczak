@@ -65,7 +65,7 @@ app.post("/api/submitContactForm", (req, res) => {
 
     const mail = {
         from: "info@michalantczak.com", // sender address
-        to: ["info@michalantczak.com", req.body.email], // list of receivers
+        to: ["info@michalantczak.com", `${req.body.email}`], // list of receivers
         subject: "Message form from michalantczak.com", // Subject line
         html: `	<div>
                     <h1>Thank you for your message!</h1>
