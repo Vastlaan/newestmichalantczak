@@ -55,7 +55,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `image`,
-          content: "../images/logo.svg",
+          content: "/images/me2.png",
         },
         {
           name: `canonicalUrl`,
@@ -67,7 +67,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: "../images/logo.svg",
+          content: "/images/me2.png",
         },
         {
           property: `og:description`,
