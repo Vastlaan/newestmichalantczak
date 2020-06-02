@@ -65,16 +65,16 @@ app.post("/api/submitContactForm", (req, res) => {
 
     const mail = {
         from: "info@michalantczak.com", // sender address
-        to: "info@michalantczak.com", // list of receivers
+        to: ["info@michalantczak.com", req.body.email], // list of receivers
         subject: "Message form from michalantczak.com", // Subject line
         html: `	<div>
                     <h1>Thank you for your message!</h1>
                     <h2>I recieved this credentials:</h2>
-					<h3 style="text-align:center">Name: ${req.body.name}.</h3>
-					<h4 style="text-align:center">Email: ${req.body.email}.</h4>
-					<p style="text-align:center">Question: ${req.body.message}.</p>
-					
-				</div>`, // html body
+    				<h3 style="text-align:center">Name: ${req.body.name}.</h3>
+    				<h4 style="text-align:center">Email: ${req.body.email}.</h4>
+    				<p style="text-align:center">Question: ${req.body.message}.</p>
+
+    			</div>`, // html body
     };
     mailer.sendMail(mail, function (err, res) {
         if (err) {
