@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import Logo from "../images/logo.svg"
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -21,7 +22,6 @@ function SEO({ description, lang, meta, title }) {
             author
             keywords
             robots
-            image
             canonicalUrl
           }
         }
@@ -32,7 +32,6 @@ function SEO({ description, lang, meta, title }) {
   const metaDescription = description || site.siteMetadata.description
   const metaKeywords = site.siteMetadata.keywords
   const metaRobots = site.siteMetadata.robots
-  const metaImage = site.siteMetadata.image
   const metaCanonicalUrl = site.siteMetadata.canonicalUrl
 
   return (
@@ -57,7 +56,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `image`,
-          content: metaImage,
+          content: Logo,
         },
         {
           name: `canonicalUrl`,
@@ -69,7 +68,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: metaImage,
+          content: Logo,
         },
         {
           property: `og:description`,
