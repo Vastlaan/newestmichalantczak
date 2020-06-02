@@ -53,18 +53,16 @@ app.post("/api/uploadVote", async (req, res) => {
 });
 
 app.post("/api/submitContactForm", (req, res) => {
-    const mailer = nodemailer.createTransport(
-        smtpTransport({
-            name: "michalantczak.com",
-            host: "mail.privateemail.com",
-            port: 465,
-            secure: true, // true for 465, false for other ports
-            auth: {
-                user: keys.EMAIL_USER,
-                pass: keys.EMAIL_PASSWORD, // generated ethereal password
-            },
-        })
-    );
+    const mailer = nodemailer.createTransport({
+        name: "michalantczak.com",
+        host: "mail.privateemail.com",
+        port: 465,
+        secure: true, // true for 465, false for other ports
+        auth: {
+            user: keys.EMAIL_USER,
+            pass: keys.EMAIL_PASSWORD, // generated ethereal password
+        },
+    });
 
     const mail = {
         from: "info@michalantczak.com", // sender address
