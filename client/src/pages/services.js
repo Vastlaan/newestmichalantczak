@@ -81,7 +81,7 @@ function Services() {
             <p>
               I specialize in fully functional, well designed and user friendly
               webshops. Automated invoices, secure check-outs with{" "}
-              <strong>Adyen</strong> API, online support and individual
+              <strong>Stripe</strong> API, online support and individual
               accounts. ALmost everything is possible.
             </p>
             <p>

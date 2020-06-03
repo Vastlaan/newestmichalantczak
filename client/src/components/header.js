@@ -170,7 +170,7 @@ const Header = () => {
           <FaGithub />
         </a>
         <a
-          href="https://github.com/Vastlaan"
+          href="https://www.linkedin.com/in/michal-antczak/"
           className={styles.util_color_blue}
         >
           <FaLinkedin />

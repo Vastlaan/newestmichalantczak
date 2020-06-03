@@ -32,7 +32,7 @@ function Main() {
       const elemRect = element.getBoundingClientRect()
       const offset = elemRect.top - bodyRect.top
 
-      const applyEffectAt = offset - window.innerHeight / 1.6
+      const applyEffectAt = offset - window.innerHeight / 1.2
 
       const apply = bodyRect.y + applyEffectAt
 
@@ -69,7 +69,7 @@ function Main() {
             <a href="https://github.com/Vastlaan">
               <FaGithub style={{ marginRight: "2rem", color: "purple" }} />
             </a>
-            <a href="https://github.com/Vastlaan">
+            <a href="https://www.linkedin.com/in/michal-antczak/">
               <FaLinkedin style={{ marginRight: "2rem", color: "darkblue" }} />
             </a>
           </p>
